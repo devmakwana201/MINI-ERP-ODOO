@@ -1,25 +1,11 @@
 {
-  "name": "agripos-backend",
+  "name": "mini-erp-backend",
   "version": "1.0.0",
-  "description": "Backend for Agri POS",
-  "main": "src/server.js",
+  "description": "Mini ERP Backend API",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
-    "lint": "eslint src/",
-    "lint:fix": "eslint src/ --fix"
-  },
-  "keywords": [
-    "agri",
-    "pos",
-    "backend",
-    "api"
-  ],
-  "author": "",
-  "license": "ISC",
-  "engines": {
-    "node": ">=20.0.0",
-    "npm": ">=10.0.0"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.840.0",

@@ -9,7 +9,6 @@ const asyncLocalStorage = new AsyncLocalStorage();
 const pool = mysql2.createPool({
     host: database.host,
     user: database.user,
-    port: database.port,
     password: database.password,
     database: database.database,
     waitForConnections: database.waitForConnections,
