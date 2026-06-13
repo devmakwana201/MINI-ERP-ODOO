@@ -365,6 +365,22 @@ const server = app.listen(serverConfig.port, () => {
     console.log(`------------------------------------------------------------------------------`);
 });
 
+// Handle server-level errors (e.g. port already in use)
+server.on("error", (err) => {
+    if (err.code === "EADDRINUSE") {
+        console.error(`------------------------------------------------------------------------------`);
+        console.error(`❌ Port ${serverConfig.port} is already in use!`);
+        console.error(`   Another instance of the server is already running.`);
+        console.error(`   Run this command to free the port, then restart:`);
+        console.error(`   kill $(lsof -ti :${serverConfig.port})`);
+        console.error(`------------------------------------------------------------------------------`);
+        process.exit(1);
+    } else {
+        console.error(`❌ Server error: ${err.message}`);
+        process.exit(1);
+    }
+});
+
 // Initialize cron jobs
 let cleanupTask = null;
 let backupTask = null;
