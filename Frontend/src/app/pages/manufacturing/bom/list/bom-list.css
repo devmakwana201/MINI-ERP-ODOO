@@ -1,0 +1,391 @@
+/* =====================================================
+   BOM List Page Styles
+   Manufacturing Module — AgriPOS ERP
+   ===================================================== */
+
+/* ── Page Wrapper ────────────────────────────────────── */
+.bom-page-wrapper {
+  padding: 1.5rem var(--margin-x, 1.5rem) 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Hero Banner ─────────────────────────────────────── */
+.bom-page-hero {
+  background: linear-gradient(135deg, #1a6b3c 0%, #2e8b5a 60%, #3aab72 100%);
+  border-radius: 14px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 4px 20px rgba(26, 107, 60, 0.22);
+  flex-wrap: wrap;
+}
+
+.bom-hero-content {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.bom-hero-icon {
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #fff;
+  flex-shrink: 0;
+  backdrop-filter: blur(8px);
+}
+
+.bom-hero-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.2rem;
+  letter-spacing: -0.3px;
+}
+
+.bom-hero-subtitle {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  max-width: 420px;
+  line-height: 1.5;
+}
+
+.btn-new-bom-hero {
+  background: #fff !important;
+  color: #1a6b3c !important;
+  border: none !important;
+  font-weight: 600 !important;
+  padding: 0.65rem 1.4rem !important;
+  border-radius: 10px !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15) !important;
+  transition: transform 0.15s, box-shadow 0.15s !important;
+  white-space: nowrap;
+}
+
+.btn-new-bom-hero:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ── Stats Cards ─────────────────────────────────────── */
+.bom-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 900px) {
+  .bom-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .bom-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.bom-stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.2rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
+  border: 1px solid #f0f0f0;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.bom-stat-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+}
+
+.bom-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.bom-stat-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.bom-stat-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.bom-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+}
+
+/* Card accent colors */
+.bom-stat-total .bom-stat-icon {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.bom-stat-active .bom-stat-icon {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.bom-stat-draft .bom-stat-icon {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.bom-stat-obsolete .bom-stat-icon {
+  background: #fff1f2;
+  color: #e11d48;
+}
+
+/* ── Table Card ──────────────────────────────────────── */
+.bom-table-card {
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.07);
+  border: 1px solid #f0f0f0;
+  overflow: hidden;
+}
+
+.bom-datatable .p-datatable-wrapper {
+  border-radius: 0;
+}
+
+/* ── Table Header Controls ───────────────────────────── */
+.bom-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1rem 1rem 0.75rem;
+  flex-wrap: wrap;
+}
+
+.bom-table-header-left {
+  flex: 1;
+  min-width: 200px;
+  max-width: 320px;
+}
+
+.bom-search-field {
+  width: 100%;
+}
+
+.bom-search-field .p-inputtext {
+  border-radius: 8px;
+  border-color: #e5e7eb;
+  font-size: 0.875rem;
+  padding: 0.55rem 0.75rem 0.55rem 2.4rem;
+}
+
+.bom-search-field .p-inputtext:focus {
+  box-shadow: 0 0 0 3px rgba(26, 107, 60, 0.15);
+  border-color: #1a6b3c;
+}
+
+.bom-table-header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-new-bom {
+  background: #1a6b3c !important;
+  border-color: #1a6b3c !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  padding: 0.55rem 1.1rem !important;
+  font-size: 0.875rem !important;
+  transition: background 0.15s !important;
+}
+
+.btn-new-bom:hover {
+  background: #145e33 !important;
+  border-color: #145e33 !important;
+}
+
+/* ── Cell Styles ─────────────────────────────────────── */
+.bom-name-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.bom-name-text {
+  font-weight: 600;
+  color: #111827;
+  font-size: 0.875rem;
+}
+
+.bom-code-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  color: #6b7280;
+  background: #f3f4f6;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: monospace;
+  letter-spacing: 0.3px;
+  width: fit-content;
+}
+
+.finished-item-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.finished-item-img {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  object-fit: contain;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  flex-shrink: 0;
+}
+
+.finished-item-placeholder {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.finished-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.finished-item-name {
+  font-weight: 500;
+  color: #111827;
+  font-size: 0.875rem;
+}
+
+.finished-item-code {
+  font-size: 0.7rem;
+  color: #9ca3af;
+  font-family: monospace;
+}
+
+.quantity-cell {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.uom-label {
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.action-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.action-edit {
+  color: #2563eb !important;
+}
+
+.action-delete {
+  color: #e11d48 !important;
+}
+
+/* ── Delete Dialog ───────────────────────────────────── */
+.delete-dialog-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #d97706;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.delete-dialog-header .pi {
+  font-size: 1.2rem;
+}
+
+.delete-dialog-body {
+  color: #4b5563;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0.5rem 0 0;
+}
+
+.delete-dialog-footer {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+/* ── Dark mode support ───────────────────────────────── */
+@media (prefers-color-scheme: dark) {
+  .bom-stat-card {
+    background: var(--surface-card, #1f2937);
+    border-color: #374151;
+  }
+
+  .bom-stat-value {
+    color: #f9fafb;
+  }
+
+  .bom-stat-label {
+    color: #9ca3af;
+  }
+
+  .bom-table-card {
+    background: var(--surface-card, #1f2937);
+    border-color: #374151;
+  }
+
+  .bom-name-text {
+    color: #f9fafb;
+  }
+
+  .bom-code-badge {
+    background: #374151;
+    color: #9ca3af;
+  }
+
+  .finished-item-name {
+    color: #f9fafb;
+  }
+}
